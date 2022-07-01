@@ -1,0 +1,76 @@
+<div class="event-schedule-area-two mt-5 pt-lg-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title text-center">
+                    <div class="title-text">
+                        <h2><b class="fs-3">Genres</b></h2>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col end-->
+        </div>
+        <!-- row end-->
+        <div class="row">
+            <div class="col-lg-12">
+
+                  <div class="tab-content">
+                    <!--  -->
+                    <!-- <div class="tab-pane fade show active" id="pills-science" role="tabpanel" aria-labelledby="pills-science-tab"> -->
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center" scope="col">Serial No.</th>
+                                        <th scope="col">Genre</th>
+                                        <th scope="col">Book Details</th>
+                                        <th class="text-center" scope="col"></th>
+                                        <th class="text-center" scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="inner-box" *ngFor="let book of books; index as i">
+                                        <th scope="row">
+                                            <div class="event-date">
+                                                <span>{{i+1}}</span>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <div class="meta fs-4">
+                                                <b>
+                                                    <span>{{book.bookCategory}}</span>
+                                                </b>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="event-wrap">
+                                                <h3><a>{{book.bookName}}</a></h3>
+                                                <div class="meta">
+                                                        <a>{{book.bookAuthor}}</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                       
+                                        <td>
+                                            <div class="primary-btn">
+                                                <a (click)="singleBook(book)"  class="btn btn-primary">Explore</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                 </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <!--  -->
+                
+                  </div>
+
+
+            </div>
+            <!-- /col end-->    
+        </div>
+        <!-- /row end-->
+    </div>
+<!-- </div> -->

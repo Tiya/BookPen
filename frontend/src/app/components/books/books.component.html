@@ -1,0 +1,77 @@
+<div class="container my-5 pt-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="section-title text-center">
+                <div class="title-text">
+                    <h2>Books List</h2>
+                </div>
+            </div>
+        </div>
+        <!-- /.col end-->
+    </div>
+    <!-- row end-->
+    <div class="row">
+        <div class="col-lg-12">
+                    <div class="table-responsive shadow m-5 p-4">
+                        <table class="table p-4">
+                            <thead>
+                                    <tr>
+                                        <th class="text-center" scope="col">
+                                            <h3> <b>Serial No.</b></h3>
+                                        </th>
+                                        <th scope="col">
+                                            <h3> <b>
+                                                Book Image
+                                            </b>
+                                            </h3>
+                                        </th>
+                                        <th scope="col">
+                                            <h3> <b>
+                                                Book Details
+                                            </b>
+                                            </h3>
+                                        </th>
+                                        <th class="text-center" scope="col"></th>
+                                    </tr>
+                            </thead>
+                <tbody>
+                    <tr class="inner-box" *ngFor="let book of books; index as i">
+                        <th scope="row">
+                            <div class="event-date text-center">
+                                <span>{{i+1}}</span>
+                            </div>
+                        </th>
+                        <td>
+                            
+                                <img style="width: 100px; border-radius: 50px; padding: 5px;" class="shadow" src="assets/images/files/{{book.bookImagePath}}" alt="" />
+                        </td>
+
+                        <td>
+                            <div class="event-wrap">
+                                <h3><b>{{book.bookName}}</b></h3>
+                                <div class="meta">
+                                    <div class="organizers text-muted">
+                                        <b> <a>{{book.bookAuthor}}</a></b>
+                                    </div>
+                                    
+                                    <div class="time p-2">
+                                        <i>{{book.bookCategory}}</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                       
+                        <td>
+                          <button class="btn btn-info" (click)="singleBook(book)"  style="cursor:pointer; margin-right: 20px; transition: ease-in-out;"> Read</button>
+                        </td>
+
+                      </tr>   
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+

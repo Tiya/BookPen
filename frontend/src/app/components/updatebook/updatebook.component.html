@@ -1,0 +1,76 @@
+
+<div class='card'>
+    <form #form="ngForm"  (ngSubmit)="form.valid&&editBook()">
+<div class='card-header'>
+ Update Book Details
+</div>
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody class="tbody">  
+          <!-- <tr>
+              <td> <label>Product Id</label></td>
+              <td><input type="text" name="book_id" [(ngModel)]="productItem.productId"/></td>                  
+            </tr>    -->
+            <tr>
+                <td class="td1"><label>Book Name</label></td>
+                <td class="td1"><input type="text" required #bookName="ngModel"   name="book_name" [(ngModel)]="bookItem.bookName"/></td>                  
+              </tr>  
+              <tr>
+                <td></td>
+                  <td><label class="text-danger" *ngIf="form.submitted&&bookName.errors?.required">Book Name is required</label></td>
+              </tr> 
+              <tr>
+                <td><label>Book Author</label></td>
+                <td><input type="text" required #bookAuthor="ngModel" name="book_author" [(ngModel)]="bookItem.bookAuthor"/></td>                  
+              </tr>  
+              <tr>
+                <td></td>
+                  <td><label class="text-danger" *ngIf="form.submitted&&bookAuthor.errors?.required">Book Author is required</label></td>
+            </tr>  
+              <tr>
+                <td><label>Book Categories</label></td>
+                <td><input type="text" required #bookCategory="ngModel"  name="book_category" [(ngModel)]="bookItem.bookCategory"/></td>                  
+              </tr>  
+
+              <tr>
+                <td></td>
+                  <td><label class="text-danger" *ngIf="form.submitted&&bookCategory.errors?.required">Book Category is required</label></td>
+            </tr> 
+
+              <tr>
+                <td><label>Book Description</label></td>
+                <td ><input type="text"  required  #bookDescription="ngModel"   name="book_description" [(ngModel)]="bookItem.bookDescription"/></td>                  
+              </tr>
+              <tr>
+                <td></td>
+                <td><label class="text-danger" *ngIf="form.submitted&&bookDescription.errors?.required">Book Description is required</label></td>
+            </tr> 
+              <tr>
+                <div>
+                 <td><label>Upload Book Image</label></td>
+                 <td> <input (change)="onImageSelect($event)" name="image" type="file" [disabled]="true"></td>
+                </div>
+              </tr> 
+             <tr>
+               <div>
+                <td><label>Upload Book(in pdf format only)</label></td>
+              <td> <input (change)="onFileSelect($event)" name="file" type="file" [disabled]="true"></td>
+               </div>
+             </tr>
+              
+              <tr>
+                <td></td>
+                <td class="submit"><input type="submit" value="Submit" id="submit" /></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </div>
+</div>
+</form>
+</div>
+
+   
+
+

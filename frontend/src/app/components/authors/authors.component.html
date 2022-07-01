@@ -1,0 +1,62 @@
+    <div class="container my-5 pt-5">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title text-center">
+                    <div class="title-text">
+                        <h2>Authors List</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col end-->
+        </div>
+        <!-- row end-->
+        <div class="row">
+            <div class="col-lg-12">
+                        <div class="table-responsive rounded shadow m-5 p-4">
+                            <table class="table p-4">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center" scope="col">Serial No.</th>
+                                        <th scope="col">Authors Image</th>
+                                        <th scope="col">Authors Name</th>
+                                        <th class="text-center" scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="inner-box" *ngFor="let author of authors; index as i">
+                                        <th scope="row">
+                                            <div class="event-date text-center">
+                                                <span>{{i+1}}</span>
+                                            </div>
+                                        </th>
+                                        <td>
+                                           
+                            
+                                <img style="width: 100px; border-radius: 50px; padding: 5px;" class="shadow" src="assets/images/files/{{author.authorImagePath}}" alt="" />
+                        
+                                        </td>
+                                        <td>
+                                            <div class="event-wrap">
+                                                <h4><a>{{author.authorname}}</a></h4>
+                                            </div>
+                                        </td>   
+                                       
+                                        <td>
+                                            <div class="primary-btn">
+                                                <button class="btn btn-info" (click)="onClick(author)" style="cursor:pointer; transition: ease-in-out;"> Read </button>
+                                            </div>
+                                        </td>
+
+                                     
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                  
+<!-- /col end-->
+        </div>
+    </div>

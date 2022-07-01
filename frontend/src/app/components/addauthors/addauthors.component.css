@@ -1,0 +1,56 @@
+.table{
+    border: 3px solid orangered;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+td {
+    border:none;
+    padding-top: 10px;
+    margin-top: 20px;
+  
+   }
+ 
+.card{
+    padding-top:60px;
+    padding-left:200px;
+    padding-right:200px;
+}
+.card-header{
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+    color: white ;
+    font-weight:1000;
+    background-color: orangered;
+    margin-left: 15px;
+    margin-right: 15px;
+   
+}
+.card-body{
+    margin-top: 10px;
+}
+
+
+#submit{
+    border-color:white;
+    background-color: orangered;
+    color: white;
+    width: 70%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+
+}
+#submit:hover{
+    background-color: green;
+    transition: 0.7s;
+}
+.td1{
+    padding-top: 30px;
+}
+.tr
+{
+   padding-top:30px ;
+}

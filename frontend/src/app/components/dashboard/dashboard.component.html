@@ -1,0 +1,153 @@
+<main class="container shadow px-5 rounded">
+          <div class="mt-5 pt-lg-5 pt-md-4 pt-sm-3 pt-xs-3">
+          </div>
+    <!-- Carousel Start -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/assets/images/ReadBackGround.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" class="img-fluid w-100" alt="...">
+                
+                <div class="container">
+                    <div class="carousel-caption">
+                        <div class="col-lg p-4 p-md-5 bg-warning rounded mb-5 align-items-center justify-content-center text-center">
+                            <h1 class="display-4  font-weight-bold"><span class="text-danger"> <b>
+                              Welcome
+                            </b> </span></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+                <img src="/assets/images/Background1.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" class="d-block w-100" alt="...">
+    
+                <div class="container  rounded" >
+                <div class="carousel-caption text-end">
+                  <div class="col-lg align-self-baseline">
+                    <div class="text-white-75 mb-5">
+                    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+                        <h1 class="fst-italic text-success">Another Feature you can <b class="text-warning"> Explore</b></h1>
+                        <p class="lead my-3">You can now download our books, for <b class="text-danger fs-4"> Free!!</b>.</p>
+                      </div>
+                      <p><a class="btn btn-lg btn-primary" routerLink="/books">Browse Books</a></p>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/assets/images/BackCollections.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" class="d-block w-100" alt="...">
+                
+                <div class="container">
+                    <div class="carousel-caption">
+                        <div class="col-lg align-self-baseline">
+                            <div class="text-white-75 mb-5">
+                            <div class="p-4 p-md-5 mb-4 text-white rounded bg-primary">
+                                <h1 class="display-4 fst-italic text-success">Coming Soon</h1>
+                                <p class="lead my-3">New update will be released with an option to read books online with our online reader.</p>
+                            </div>
+                            </div>
+                        </div>
+                        
+            </div>
+            </div>
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Carousel End -->
+
+<div class="row">
+<div class="col-md">
+<h3 class="p-4 mb-4 fst-italic border-bottom">
+Our Collections</h3>
+
+<section class="container-fluid my-4">
+
+<div class="row">
+  <ng-container *ngFor="let book of books; let i=index">
+    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 cards" *ngIf="i<6">
+      <div class="card" >
+        <div class="card-body">
+            <img src="assets/images/files/{{book.bookImagePath}}" class="card-img-top" alt="...">
+          <h5 class="card-title mt-2">{{book.bookName}}</h5>
+          <p class="card-text"></p>
+          <a (click)="singleBook(book)" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+</section>
+
+</div>
+
+
+</div>
+
+<!-- Genres -->
+<div class="row" id="genres">
+  <div class="col-md">
+  <h3 class="p-4 mb-4 fst-italic border-bottom">
+  Genre
+  </h3>
+  
+  <div id="myCarousel1" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="/assets/images/Booksgenres.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" class="img-fluid w-100" alt="...">
+            
+            <div class="container">
+                <div class="carousel-caption">
+                    <div class="col-lg p-4 p-md-5 bg-info rounded mb-5 align-items-center justify-content-center text-center">
+                        <h1 class="display-4  font-weight-bold"><span class="text-danger"> <b>
+                          Find Your Taste
+                        </b> </span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-item">
+            <img src="/assets/images/Genres.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" class="d-block w-100" alt="...">
+
+            <div class="container  rounded" >
+            <div class="carousel-caption text-end">
+              <div class="col-lg align-self-baseline">
+                <div class="text-white-75 mb-5">
+                  <p><a class="btn btn-lg btn-success" routerLink="/genres">Explore Genres</a></p>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel1" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel1" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+    </button>
+</div>
+  </div>
+</div>
+
+</main>

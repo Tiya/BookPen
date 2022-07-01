@@ -1,0 +1,42 @@
+<div style="padding-top: 8%;" class='card'>
+    <form class="shadow" style="padding-top: 2%;" #form="ngForm" (ngSubmit)="form.valid&&AddAuthor()">
+        <div class='card-header'>
+  Add Author
+  </div>
+  <div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody class="tbody"> 
+            <tr>
+                <td class="td1"><label>Author Name</label></td>
+                <td><input type="text" required #authorname="ngModel" name="authorname" autocomplete="off" required [(ngModel)]="authorItem.authorname"/></td>                  
+            </tr>  
+            <tr>
+              <td></td>
+                <td><label class="text-danger" *ngIf="form.submitted&&authorname.errors?.required">Author Name is required</label></td>
+            </tr> 
+            <tr>
+              <td><label>About Author</label></td>
+              <td><input type="text" required #aboutauthor="ngModel" name="aboutauthor" autocomplete="off" required [(ngModel)]="authorItem.aboutauthor"/></td>  
+            </tr>  
+            <tr>
+              <td></td>
+                <td><label class="text-danger" *ngIf="form.submitted&&aboutauthor.errors?.required">Book Author is required</label></td>
+            </tr>  
+            <tr>
+              <div>
+               <td><label>Upload Author Image</label></td>
+                 <td> <input (change)="onImageSelect($event)" required name="image" type="file"  accept="image/png, image/jpeg, image/jpg"></td>
+                </div>
+              </tr> 
+       <tr>
+                <td></td>
+                <td class="submit"><input type="submit" value="Submit" id="submit" /></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </div>
+  </div>
+  </form>
+  </div>

@@ -1,0 +1,146 @@
+  <!-- Masthead-->
+  <header class="masthead">
+    <div class="container px-4 px-lg-5 h-100">
+        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-8 align-self-end">
+                <h1 class="text-white font-weight-bold">Welcome to Book<span class="text-danger">N</span>Pen</h1>
+                <hr class="divider" />
+            </div>
+            <div class="col-lg-8 align-self-baseline">
+                <p class="text-white-75 mb-5">The free platform
+                  that empowers you to read and write anything that causes a revolution to your heart</p>
+                <a class="btn btn-primary btn-xl" (click)='onClick("services")'>Find Out More</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<!-- About-->
+<section class="page-section bg-primary" id="about">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="text-white mt-0">Build Your Library with your Favourite Books</h2>
+                <hr class="divider divider-light" />
+                <p class="text-white-75 mb-4">Discover books, shorts, and book summaries
+                  on-the-go with a single app. With the BookNPen Select
+                  Summaries, you now have access to key insights
+                  from award winninb collections. Here's everything you
+                  need to set reading goals for a better life!</p>
+                <a class="btn btn-light btn-xl" (click)="onClick('signup')">Get Started!</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Services-->
+<section class="page-section" id="services">
+    <div class="container px-4 px-lg-5">
+        <h2 class="text-center mt-0">At Your Service</h2>
+        <hr class="divider" />
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi bi-book fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">Read more, Read better.</h3>
+                    <p class="text-muted mb-0">Build a library on the go, with a wide range of content in different formats
+                        and different languages. Discover books, shorts and book summaries on-the-go with a single app.
+                        <br>
+                        <br>
+                        Reading Goals to live a  better life</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi bi-calendar-check fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">Up to Date</h3>
+                    <p class="text-muted mb-0">All books are kept up to date to keep things fresh.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi bi-cloud-arrow-up fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">Ready to Publish</h3>
+                    <p class="text-muted mb-0 ">A free of cost publishing platform, BookNPen helps
+                      you write, publish and distribute your book
+                      globally as eBook. We believe that every
+                      story has the potential to make a difference.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">Large Collection</h3>
+                    <p class="text-muted mb-0">Large variety of collections from different languages</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- signup-->
+<section class="page-section bg-light" id="signup">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6 text-center">
+                <h2 class="mt-0">Sign Up</h2>
+                <hr class="divider" />
+                <p class="text-muted mb-5">Ready to start a new journey with us? Sign Up for free <b class="text-danger">!!</b></p>
+            </div>
+        </div>
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+            <div class="col-lg-6">
+               
+                <form id="contactForm" #userForm ="ngForm" data-sb-form-api-token="API_TOKEN">
+                    <!-- Name input-->
+                    <div class="form-floating mb-3">
+                        <input autocomplete="off" class="form-control" #name="ngModel"  pattern="^[a-zA-Z]*$"  [class.is-invalid]="name.invalid&&name.touched" [(ngModel)]="registerUserData.username" name="username" id="name" type="text" placeholder="Enter your name..." required/>
+                        <label for="name">Full name</label>
+                        <div class="text-danger" [class.d-none]="name.valid||name.untouched">A name is required.</div>
+                    </div>
+                    <!-- Email address input-->
+                    <div class="form-floating mb-3">
+                        <input autocomplete="off" class="form-control" #email="ngModel" [class.is-invalid]="email.invalid&&email.touched" [(ngModel)]="registerUserData.email" name="email" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                        <label for="email">Email address</label>
+                        <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                        <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                    </div>
+                    <!-- Phone number input-->
+                    <div class="form-floating mb-3">
+                        <input autocomplete="off" class="form-control" #password="ngModel"  pattern="^[a-zA-Z0-9]*$"  [class.is-invalid]="password.invalid&&password.touched" [(ngModel)]="registerUserData.password" name="password"  id="password" type="password" placeholder="Enter Password" data-sb-validations="required" />
+                        <label for="password">Password</label>
+                        <div class="invalid-feedback" data-sb-feedback="password:required">A Password is required.</div>
+                    </div>
+                    <small class="text-muted align-items-center">By clicking Sign up, you agree to the terms of use.</small>
+                    <br>
+                    <br>
+
+                    <!-- Submit success message-->
+                    <!-- This is what your users will see when the form has successfully submitted-->
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3">
+                            <div class="fw-bolder">Registration successful! Please proceed to login.
+                            </div>
+                            <br />
+                        </div>
+                    </div>
+
+                    
+                    <!-- Submit error message-->
+                    <!-- This is what your users will see when there is an error submitting the form-->
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+
+                    <!-- Submit Button-->
+                    <div class="d-grid">
+                      <button class="btn btn-primary btn-xl disabled" (click)="registerUser()" id="submitButton" type="submit">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+       
+    </div>
+</section>
+<app-login></app-login>

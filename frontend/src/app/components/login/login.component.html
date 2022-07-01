@@ -1,0 +1,30 @@
+     <!-- Modal Sign In -->
+
+     <div class="modal modal-signin fade py-5" aria-hidden="true" aria-labelledby="modal-title" tabindex="-1" role="dialog" id="modalSignin">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-5 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h2 class="modal-title fw-bold mb-0" id="modal-title">Log In</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+    
+          <div class="modal-body p-5 pt-0">
+            <form class="form" (ngSubmit)="form.valid" #form ="ngForm" >
+              <div class="form-floating mb-3">
+                <input autocomplete="off" required type="email"  #email="ngModel" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com" [(ngModel)]="loginUserData.email" name="email" required>
+                <label for="floatingInput">Email address</label>
+                <div class="text-danger" [class.d-none]="email.valid||email.untouched">An email is required.</div>
+              </div>
+              <div class="form-floating mb-3">
+                <input autocomplete="off" type="password" #password="ngModel" required class="form-control rounded-4" id="floatingPassword" placeholder="Password" [(ngModel)]="loginUserData.password" pattern="^[a-zA-Z0-9]*$"  [class.is-invalid]="password.invalid&&password.touched"  name="password"  id="password" type="password" placeholder="Enter Password" data-sb-validations="required"/>
+                <label for="floatingPassword">Password</label>
+                <div class="text-danger" [class.d-none]="password.valid||password.untouched">A password is required.</div>
+              </div>
+              <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" data-bs-dismiss="modal" id="closemodal" type="submit" (click)="loginUser()">LOGIN</button>
+              <!-- <small><i>For Admin Login use Email as <b>admin@domain.com</b>  and Password <b>admin1234</b></i></small>
+              <hr class="m-4"> -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>

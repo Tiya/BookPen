@@ -1,0 +1,55 @@
+<div class="container">
+
+    <div class="row">
+        <!-- <div class="col-lg-12">
+            <div class="text-center justify-content-md-center">
+                <div class="title-text">
+                    <h1><b>{{bookItem.bookName}}</b></h1>
+                </div>
+            </div>
+        </div> -->
+        <!-- /.col end-->
+    </div>
+    <div class="row justify-content-md-center">
+      <div class="col">
+       <img src="assets/images/files/{{bookItem.bookImagePath}}" class="image-book"/>
+      </div>
+      <div class="col-9 col-auto">
+       
+        <div class="col-md-auto">
+          <div class="title-text">
+            <h1><b>{{bookItem.bookName}}</b></h1>
+        </div>
+           <h2>by <label class="bookitem text-success">{{bookItem.bookAuthor}}</label></h2> 
+          </div>
+          <div>
+           <p  class="cat">  {{bookItem.bookCategory}}</p>
+          </div>
+          <div class="col-md-auto">
+            <Summary>{{bookItem.bookDescription}}</Summary><br>
+          </div>
+          <div>
+            <table>
+              <tr>
+                <td>
+                <button class="btn btn-success"  id="read" style="cursor:pointer">
+                <a href="assets/images/files/{{bookItem.bookFilePath}}" target="_blank">Read</a></button>
+                </td>
+                <td *ngIf="_authservice.userRoleAccess()">
+                <button class="btn btn-warning"id="edit" style="cursor:pointer"  (click)="editBook(bookItem)"> Edit</button>
+             
+                <button class="btn btn-danger" id="delete" style="cursor:pointer" (click)="deleteBook(bookItem)"> Delete</button>   
+                </td>
+            </tr>
+            </table>
+        </div>
+      </div>
+      
+    </div>
+
+</div>
+    
+    
+      
+      
+
