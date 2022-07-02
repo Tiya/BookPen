@@ -5,7 +5,7 @@ const multer=require('multer')
 const jwt=require('jsonwebtoken')
 const path = require('path');
 var fs = require('fs');
-var sharp = require('sharp');
+
 
 console.log("in addBookRoutes");
   const cors = require('cors');
@@ -22,10 +22,10 @@ console.log("in addBookRoutes");
   var fs = require('fs');
 var dir = '../frontend/src/assets/images';
 
-  if (!fs.existsSync(dir)){
-    // console.log("new: "+dir);
-      fs.mkdirSync(dir);
-  }
+  // if (!fs.existsSync(dir)){
+  //   // console.log("new: "+dir);
+  //     fs.mkdirSync(dir);
+  // }
   // console.log("old: "+dir);
   
   booksRouter.use(cors());
