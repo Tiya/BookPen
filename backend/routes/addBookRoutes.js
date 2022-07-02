@@ -20,18 +20,12 @@ console.log("in addBookRoutes");
     parameterLimit: 1000000
   }));
   var fs = require('fs');
-var dir = '../frontend/src/assets/images';
 
-  // if (!fs.existsSync(dir)){
-  //   // console.log("new: "+dir);
-  //     fs.mkdirSync(dir);
-  // }
-  // console.log("old: "+dir);
   
   booksRouter.use(cors());
 
 
-  booksRouter.use('/api/images', express.static(path.join('../frontend/src/assets/images/files')));
+  
   const storage = multer.diskStorage({
     destination:(req,file, callback)=>{
       callback(null, '../frontend/src/assets/images/files')

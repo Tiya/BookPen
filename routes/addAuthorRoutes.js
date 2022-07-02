@@ -23,12 +23,12 @@ require("dotenv")
         parameterLimit: 1000000
       }));
     var fs = require('fs');
-  var dir = '../frontend/src/assets/images';
+  // var dir = '../frontend/src/assets/images';
   
-    if (!fs.existsSync(dir)){
-      // console.log("new: "+dir);
-        fs.mkdirSync(dir);
-    }
+  //   if (!fs.existsSync(dir)){
+  //     // console.log("new: "+dir);
+  //       fs.mkdirSync(dir);
+  //   }
     // console.log("old: "+dir);
     authorRouter.use(cors());
 
