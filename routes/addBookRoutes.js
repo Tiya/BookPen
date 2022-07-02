@@ -31,7 +31,7 @@ console.log("in addBookRoutes");
   booksRouter.use(cors());
 
 
-  booksRouter.use('/api/images', express.static(path.join('../frontend/src/assets/images/files')));
+ // booksRouter.use('/api/images', express.static(path.join('../frontend/src/assets/images/files')));
   const storage = multer.diskStorage({
     destination:(req,file, callback)=>{
       callback(null, '../frontend/src/assets/images/files')
