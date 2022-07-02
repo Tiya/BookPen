@@ -19,9 +19,9 @@ app.use(bodyparser.json({
   }));
   app.use(express.static(__dirname+'/dist'));
 app.use('/api',api);
-app.get('/',(req,res)=>{
+app.get('/api/',(req,res)=>{
     // res.send('Hello from Server');
-    res.sendFile(path.join(__dirname+'/dist/index.html'));
+    res.sendFile(path.join(__dirname+'/dist/book-npen-app/index.html'));
 })
 
 const booksRouter=require('./routes/addBookRoutes');
