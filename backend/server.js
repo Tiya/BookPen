@@ -17,11 +17,11 @@ app.use(bodyparser.json({
     extended: true,
     parameterLimit: 1000000
   }));
-  app.use(express.static('./dist/book-npen-app'));
+  app.use(express.static(__dirname+'/dist'));
 app.use('/api',api);
 app.get('/',(req,res)=>{
     // res.send('Hello from Server');
-    res.sendFile(path.join(__dirname+'/dist/book-npen-app/index.html'));
+    res.sendFile(path.join(__dirname+'/dist/index.html'));
 })
 
 const booksRouter=require('./routes/addBookRoutes');
