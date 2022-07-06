@@ -32,7 +32,7 @@ require("dotenv")
     // console.log("old: "+dir);
     authorRouter.use(cors());
 
-  authorRouter.use('/images', express.static(path.join('../frontend/src/assets/images/files')));
+ // authorRouter.use('/images', express.static(path.join('../frontend/src/assets/images/files')));
   const storage = multer.diskStorage({
     destination:(req,file, callback)=>{
       callback(null, '../frontend/src/assets/images/files')
